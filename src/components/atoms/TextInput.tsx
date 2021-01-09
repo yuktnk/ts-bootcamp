@@ -8,7 +8,7 @@ interface Props {
 }
 
 
-const TextInput: FC<Props> = (props) => {
+const TextInput: FC<Props> = React.memo((props) => {
 
   const {
     onChange,
@@ -24,6 +24,6 @@ const TextInput: FC<Props> = (props) => {
       type={type}
     />
   )
-}
+});
 
 export default TextInput;

@@ -6,7 +6,7 @@ interface Props {
   onClick: () => void
 }
 
-const SearchButton: FC<Props> = (props) => {
+const SearchButton: FC<Props> = React.memo((props) => {
 
   const {label, onClick} = props
 
@@ -18,6 +18,6 @@ const SearchButton: FC<Props> = (props) => {
       {label}
     </button>
   )
-}
+});
 
 export default SearchButton
